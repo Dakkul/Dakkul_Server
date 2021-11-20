@@ -15,128 +15,10 @@
    
    
 ### 📝 코드 컨벤션 📝   
-- **constants**
-    
-    responseMessage.js
-    
-    ```jsx
-    module.exports = {
-      NULL_VALUE: '필요한 값이 없습니다',
-      OUT_OF_VALUE: '파라미터 값이 잘못되었습니다',
-      WRONG_QUERY: '쿼리 값이 잘못되었습니다',
-    
-      // 회원가입
-      CREATED_USER: '회원 가입 성공',
-      DELETE_USER: '회원 탈퇴 성공',
-      ALREADY_EMAIL: '이미 사용중인 이메일입니다.',
-    
-      // 로그인
-      LOGIN_SUCCESS: '로그인 성공',
-      LOGIN_FAIL: '로그인 실패',
-      NO_USER: '존재하지 않는 회원입니다.',
-      MISS_MATCH_PW: '비밀번호가 맞지 않습니다.',
-    
-      // 프로필 조회
-      READ_PROFILE_SUCCESS: '프로필 조회 성공',
-    
-    	// 종이
-    	LIKE_SUCCESS: '좋아요 변환 성공',
-    
-    	// 조회
-      READ_SUCCESS: '조회 성공',
-    	NO_SEARCH_RESULT: '검색 결과 없음',
-    	
-    };
-    ```
-    
-    statusCode.js
-    
-    ```jsx
-    module.exports = {
-      OK: 200,
-      CREATED: 201,
-      NO_CONTENT: 204,
-      BAD_REQUEST: 400,
-      UNAUTHORIZED: 401,
-      FORBIDDEN: 403,
-      NOT_FOUND: 404,
-      INTERNAL_SERVER_ERROR: 500,
-      SERVICE_UNAVAILABLE: 503,
-      DB_ERROR: 600,
-    };
-    ```
-    
-- **lib**
-    
-    util.js
-    
-    ```jsx
-    module.exports = {
-      success: (status, message, data) => {
-        return {
-          status,
-          success: true,
-          message,
-          data,
-        };
-      },
-      fail: (status, message) => {
-        return {
-          status,
-          success: false,
-          message,
-        };
-      },
-    };
-    ```
-    
-- .eslintrc.js
-    
-    ```jsx
-    module.exports = {
-      env: {
-        node: true,
-        commonjs: true,
-        es2021: true,
-      },
-      extends: ["eslint:recommended", "eslint-config-prettier"],
-      parserOptions: {
-        ecmaVersion: 12,
-      },
-      rules: {
-        "no-prototype-builtins": "off",
-        "no-self-assign": "off",
-        "no-empty": "off",
-        "no-case-declarations": "off",
-        "consistent-return": "off",
-        "arrow-body-style": "off",
-        camelcase: "off",
-        quotes: "off",
-        "no-unused-vars": "off",
-        "comma-dangle": "off",
-        "no-bitwise": "off",
-        "no-use-before-define": "off",
-        "no-extra-boolean-cast": "off",
-        "no-empty-pattern": "off",
-        curly: "off",
-        "no-unreachable": "off",
-      },
-    };
-    ```
-    
-- .prettierrc.js
-    
-    ```jsx
-    module.exports = {
-      bracketSpacing: true,
-      jsxBracketSameLine: true,
-      singleQuote: true,
-      trailingComma: "all",
-      arrowParens: "always",
-      printWidth: 200,
-      tabWidth: 2,
-    };
-    ```
+Naming Convention   
+* 변수명, 함수명은 lowerCamelCase로 작성
+* 변수명, 함수명 20자 이내, 약어 사용 지양
+* 함수명은 동사 + 명사
        
 ### 🌲 브랜치 전략 🌲   
 * main 브랜치에서 dev 브랜치 생성
@@ -155,4 +37,4 @@
 - rename: 파일, 클래스, 메서드명, 폴더명 수정
 - chore: 설정 파일 등
    
-### 📁 프로젝트 폴더링 📁
+### 📁 프로젝트 폴더링 📁   
