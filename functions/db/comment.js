@@ -19,7 +19,7 @@ const getComments = async(client, post_id) => {
         `,
         [post_id]
     )
-    return convertSnakeToCamel.keysToCamel(rows[0]);
+    return convertSnakeToCamel.keysToCamel(rows);
 }
 
 const getCount = async(client, post_id) => {
