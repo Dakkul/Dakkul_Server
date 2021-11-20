@@ -4,7 +4,7 @@ const convertSnakeToCamel = require('../lib/convertSnakeToCamel');
 const getAllPosts = async (client) => {
   const { rows } = await client.query(
     `
-    SELECT id, title, emoji FROM post p
+    SELECT id, title, image_before FROM post p
     `,
   );
   return convertSnakeToCamel.keysToCamel(rows);
