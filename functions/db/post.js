@@ -15,7 +15,7 @@ const getPostById = async (client, postId) => {
     `
       SELECT * FROM post p
       WHERE id = $1
-      `,
+    `,
     [postId],
   );
   return convertSnakeToCamel.keysToCamel(rows[0]);
@@ -26,10 +26,9 @@ const getPostByIds = async (client, postIds) => {
     `
       SELECT id, title, emoji FROM post
       WHERE id IN (${postIds.join()})
-      `,
-    [postIds],
+    `,
   );
-  return convertSnakeToCamel.keysToCamel(rows[0]);
+  return convertSnakeToCamel.keysToCamel(rows);
 };
 
 module.exports = { getAllPosts, getPostById, getPostByIds };
