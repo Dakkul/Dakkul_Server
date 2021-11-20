@@ -5,7 +5,7 @@ const getAllTags = async (client) => {
   const { rows } = await client.query(
     `
       SELECT * FROM tag
-      `,
+    `,
   );
   return convertSnakeToCamel.keysToCamel(rows);
 };
@@ -15,10 +15,9 @@ const getTagByTagIds = async (client, tagIds) => {
     `
         SELECT * FROM tag
         WHERE id IN (${tagIds.join()})
-      `,
-    [tagIds],
+    `,
   );
-  return convertSnakeToCamel.keysToCamel(rows[0]);
+  return convertSnakeToCamel.keysToCamel(rows);
 };
 
 module.exports = { getAllTags, getTagByTagIds };
