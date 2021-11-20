@@ -7,7 +7,7 @@ const {commentDB} = require('../../../db');
 
 module.exports = async (req, res) => {
 
-  const {postId} = req.params;
+  const {postId} = req.query;
   
   // 필요한 값이 없을 때 보내주는 response
   if (!postId) return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
