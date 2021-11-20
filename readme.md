@@ -43,9 +43,7 @@ Naming Convention
 ### 📑 package.json 캡처 📑   
    
    
-### 📜 ERD 📜   
-<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/ERD.png">   
+### 📜 ERD 📜    
    
 ### 📋 테이블 정의 📋   
-<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/post.png">   
 <img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/comment.png">   
