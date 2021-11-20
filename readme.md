@@ -38,4 +38,14 @@ Naming Convention
 - chore: 설정 파일 등
    
 ### 📁 프로젝트 폴더링 📁   
-<img src="https://user-images.githubusercontent.com/76513385/142734662-034daa3b-cf39-447f-90fa-b9182d0b1300.png">
+<img src="https://user-images.githubusercontent.com/76513385/142734662-034daa3b-cf39-447f-90fa-b9182d0b1300.png">   
+   
+### 📑 package.json 캡처 📑   
+   
+   
+### 📜 ERD 📜   
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/ERD.png">   
+   
+### 📋 테이블 정의 📋   
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/post.png">   
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/comment.png">   
