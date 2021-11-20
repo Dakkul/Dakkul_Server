@@ -41,9 +41,13 @@ Naming Convention
 <img src="https://user-images.githubusercontent.com/76513385/142734662-034daa3b-cf39-447f-90fa-b9182d0b1300.png">   
    
 ### 📑 package.json 캡처 📑   
-   
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/package_json.png">
    
 ### 📜 ERD 📜    
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/table/ERD.png">
    
 ### 📋 테이블 정의 📋   
-<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/comment.png">   
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/table/post.png">   
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/table/comment.png">   
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/table/tag.png">   
+<img src="https://s3-joint-seminar.s3.ap-northeast-2.amazonaws.com/images/table/post_tag.png">
