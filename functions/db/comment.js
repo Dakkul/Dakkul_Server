@@ -3,7 +3,7 @@ const convertSnakeToCamel = require('../lib/convertSnakeToCamel');
 const createComment = async(client, content, post_id) => {
     const {rows} = await client.query(
         `
-        INSERT INTO "comment" c (content, post_id)
+        INSERT INTO "comment" (content, post_id)
         VALUES ($1, $2)
         `,
         [content, post_id]
