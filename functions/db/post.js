@@ -24,7 +24,7 @@ const getPostById = async (client, postId) => {
 const getPostByIds = async (client, postIds) => {
   const { rows } = await client.query(
     `
-      SELECT id, title, emoji FROM post
+      SELECT id, title, image_before FROM post
       WHERE id IN (${postIds.join()})
     `,
   );
