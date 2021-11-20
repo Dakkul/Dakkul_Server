@@ -30,7 +30,7 @@ module.exports = {
   DELETE_ONE_POST_SUCCESS: '포스트 삭제 성공',
   NO_POST: '존재하지 않는 포스트입니다.',
 
-  // 포스트
+  // 코멘트
   ADD_ONE_COMMENT_SUCCESS: '한 마디 추가 성공',
   READ_ONE_COMMENT_SUCCESS: '한 마디 조회 성공',
   READ_ALL_COMMENTS_SUCCESS: '모든 한 마디 조회 성공',
