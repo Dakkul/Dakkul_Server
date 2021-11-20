@@ -15,17 +15,15 @@ module.exports = async (req, res) => {
   try {
     client = await db.connect(req);
 
-    const post = await postDB.getPostById(client, postId);
-    const postTags = await postTagDB.getAllPostTags(client);
     const tags = await tagDB.getAllTags(client);
+    const postTags = await postTagDB.getAllPostTags(client);
+    const post = await postDB.getPostById(client, postId);
 
     for (let i = 0; i < postTags.length; i++) {
       postTags[i].tag = _.find(tags, (tag) => tag.id === postTags[i].tagId);
     }
 
-    for (let i = 0; i < post.length; i++) {
-      post[i].tags = _.filter(postTags, (pt) => pt.postId === post[i].id).map((o) => o.tag);
-    }
+    post.tags = _.filter(postTags, (pt) => pt.postId === post.id).map((o) => o.tag);
 
     res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.READ_ONE_POST_SUCCESS, post));
   } catch (error) {
