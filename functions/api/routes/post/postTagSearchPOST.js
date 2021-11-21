@@ -16,17 +16,18 @@ module.exports = async (req, res) => {
     client = await db.connect(req);
 
     const tagsByTagIds = await tagDB.getTagByTagIds(client, tagIds);
-
     const postTagByTagIds = await postTagDB.getPostTagByTagIds(client, tagIds);
     const postIds = [...new Set(postTagByTagIds.map((o) => o.postId).filter(Boolean))];
     const posts = await postDB.getPostByIds(client, postIds);
+    const postTags = await postTagDB.getAllPostTags(client);
+    const tags = await tagDB.getAllTags(client);
 
-    for (let i = 0; i < postTagByTagIds.length; i++) {
-      postTagByTagIds[i].tag = _.find(tagsByTagIds, (tag) => tag.id === postTagByTagIds[i].tagId);
+    for (let i = 0; i < postTags.length; i++) {
+      postTags[i].tag = _.find(tags, (tag) => tag.id === postTags[i].tagId);
     }
 
     for (let i = 0; i < posts.length; i++) {
-      posts[i].tags = _.filter(postTagByTagIds, (pt) => pt.postId === posts[i].id).map((o) => o.tag);
+      posts[i].tags = _.filter(postTags, (pt) => pt.postId === posts[i].id).map((o) => o.tag);
     }
 
     res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.READ_ALL_POSTS_SUCCESS, posts));
